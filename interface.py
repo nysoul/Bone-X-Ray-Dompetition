@@ -47,5 +47,14 @@ im_size=320
 X_valid_path= load_path(input_image_directory, size = im_size)  
 X_valid = load_image(X_valid_path,im_size)
 
-print(model.predict(X_valid))
+prob = model.predict(X_valid)
+avg = 0.0
+for i in prob:
+    avg += i
+avg /= int(prob.size)
+
+if (avg < 0.5): 
+    print ('The bone is Normal')
+else:
+    print ('the bone is Abnormal')
     
