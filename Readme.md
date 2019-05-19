@@ -14,13 +14,13 @@ MURA is a dataset of musculoskeletal radiographs consisting of 14,982 studies fr
  python
 ```
 
-# For training Run...
+### For training Run...
 
 ```sh
 $ python train.py
 ```
 
-# For Predictions...
+### For Predictions...
 Copy images to predict folder and run the following:
 ```sh
 $ python interface.py
