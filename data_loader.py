@@ -4,7 +4,7 @@ import cv2
 import random
 import keras.backend as K
 
-def load_path(root_path = '../valid/XR_ELBOW', size = 512):
+def load_path(root_path = 'valid/XR_FOREARM', size = 512):
 	'''
 	load MURA data
 
@@ -25,7 +25,7 @@ def load_path(root_path = '../valid/XR_ELBOW', size = 512):
 	labels = np.asarray(labels)
 	return Path, labels
 
-def load_image(Path = '../valid/XR_ELBOW', size = 512):
+def load_image(Path = 'valid/XR_FOREARM', size = 512):
 	Images = []
 	for path in Path:
 		image = cv2.imread(path,cv2.IMREAD_GRAYSCALE)
